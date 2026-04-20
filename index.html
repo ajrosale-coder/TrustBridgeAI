@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TrustBridge AI - Anonymous Feedback Hub</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Header -->
+        <header class="header">
+            <div class="header-content">
+                <div class="header-branding">
+                    <h1 class="product-name">TrustBridge AI</h1>
+                    <h2 class="page-title">Anonymous Feedback Hub</h2>
+                    <p class="page-description">
+                        A safe space for employees to share honest feedback and help leadership improve communication and trust.
+                    </p>
+                </div>
+            </div>
+        </header>
+
+        <!-- Main Content Area -->
+        <main class="main-content">
+            <div class="content-grid">
+                <!-- Left Panel: Submission Form -->
+                <section class="panel left-panel">
+                    <div class="panel-header">
+                        <h3>Submit Anonymous Feedback</h3>
+                    </div>
+
+                    <form id="feedbackForm" class="feedback-form">
+                        <!-- Feedback Category -->
+                        <div class="form-group">
+                            <label for="category" class="form-label">Feedback Category</label>
+                            <select id="category" class="form-select" required>
+                                <option value="">Select a category...</option>
+                                <option value="communication">Communication</option>
+                                <option value="transparency">Transparency</option>
+                                <option value="leadership">Leadership Decisions</option>
+                                <option value="meetings">Meetings</option>
+                                <option value="climate">Workplace Climate</option>
+                                <option value="other">Other</option>
+                            </select>
+                        </div>
+
+                        <!-- Urgency Level -->
+                        <div class="form-group">
+                            <label for="urgency" class="form-label">Urgency Level</label>
+                            <select id="urgency" class="form-select" required>
+                                <option value="">Select urgency level...</option>
+                                <option value="low">Low</option>
+                                <option value="medium">Medium</option>
+                                <option value="high">High</option>
+                            </select>
+                        </div>
+
+                        <!-- Feedback Text -->
+                        <div class="form-group">
+                            <label for="feedback" class="form-label">Your Feedback</label>
+                            <textarea 
+                                id="feedback" 
+                                class="form-textarea" 
+                                placeholder="Share your concern, experience, or suggestion. Your identity will not be shown."
+                                rows="5"
+                                required
+                            ></textarea>
+                        </div>
+
+                        <!-- Suggested Improvement -->
+                        <div class="form-group">
+                            <label for="suggestion" class="form-label">Suggested Improvement <span class="optional">(optional)</span></label>
+                            <input 
+                                type="text" 
+                                id="suggestion" 
+                                class="form-input"
+                                placeholder="What would help improve this situation?"
+                            >
+                        </div>
+
+                        <!-- Anonymity Reassurance -->
+                        <div class="form-group checkbox-group">
+                            <label class="checkbox-label">
+                                <input type="checkbox" class="checkbox-input" readonly checked>
+                                <span>This submission is anonymous and intended to support healthier communication.</span>
+                            </label>
+                        </div>
+
+                        <!-- Submit Button -->
+                        <button type="submit" class="btn btn-primary btn-submit">
+                            <span class="btn-text">Submit Feedback</span>
+                        </button>
+
+                        <!-- Success Message -->
+                        <div id="successMessage" class="success-message" style="display: none;">
+                            <div class="success-icon">✓</div>
+                            <p>Feedback submitted anonymously.</p>
+                        </div>
+                    </form>
+                </section>
+
+                <!-- Right Panel: AI Summary -->
+                <section class="panel right-panel">
+                    <div class="panel-header">
+                        <h3>Leadership Summary Preview</h3>
+                        <span class="ai-badge">AI-generated demo summary</span>
+                    </div>
+
+                    <div id="summaryContent" class="summary-content">
+                        <!-- Summary Card -->
+                        <div class="summary-card">
+                            <h4 class="summary-title">This Week's Feedback Overview</h4>
+                            <p class="summary-text">
+                                Faculty feedback this week shows recurring concerns about unclear communication around departmental decisions and inconsistent follow-up after meetings.
+                            </p>
+                        </div>
+
+                        <!-- Top Themes -->
+                        <div class="themes-section">
+                            <h4 class="section-title">Top Concern Themes</h4>
+                            <ul class="themes-list">
+                                <li class="theme-item">Lack of clarity in updates</li>
+                                <li class="theme-item">Delayed communication after decisions</li>
+                                <li class="theme-item">Employees feeling unheard</li>
+                                <li class="theme-item">Confusion around next steps</li>
+                            </ul>
+                        </div>
+
+                        <!-- Sentiment Section -->
+                        <div class="sentiment-section">
+                            <h4 class="section-title">Sentiment & Trend</h4>
+                            <div class="sentiment-item">
+                                <span class="sentiment-label">Concern Level:</span>
+                                <span class="sentiment-badge sentiment-moderate">Moderate to High</span>
+                            </div>
+                            <div class="sentiment-item">
+                                <span class="sentiment-label">Trend:</span>
+                                <span class="sentiment-value">Repeated across multiple submissions</span>
+                            </div>
+                        </div>
+
+                        <!-- Suggested Actions -->
+                        <div class="actions-section">
+                            <h4 class="section-title">Suggested Actions</h4>
+                            <ol class="actions-list">
+                                <li class="action-item">Share a weekly decision update with faculty</li>
+                                <li class="action-item">Clarify next steps after meetings</li>
+                                <li class="action-item">Create a recurring space for open questions</li>
+                                <li class="action-item">Acknowledge concerns publicly to build trust</li>
+                            </ol>
+                        </div>
+
+                        <!-- Quotes Section -->
+                        <div class="quotes-section">
+                            <h4 class="section-title">Sample Anonymous Quotes</h4>
+                            <div class="quotes-container">
+                                <div class="quote-card">
+                                    <p class="quote-text">"It often feels like decisions are made before faculty have a chance to give input."</p>
+                                </div>
+                                <div class="quote-card">
+                                    <p class="quote-text">"We need clearer follow-up after meetings so people know what is actually changing."</p>
+                                </div>
+                                <div class="quote-card">
+                                    <p class="quote-text">"More transparency would help people trust leadership decisions."</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </div>
+        </main>
+
+        <!-- Footer Navigation -->
+        <footer class="footer">
+            <div class="footer-buttons">
+                <button class="btn btn-secondary" onclick="goToDashboard()">
+                    Back to Dashboard
+                </button>
+                <button class="btn btn-secondary" onclick="goToNextFeature()">
+                    Next Feature
+                </button>
+            </div>
+        </footer>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
