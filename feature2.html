@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TrustBridge AI - AI Communication Summarizer</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Header -->
+        <header class="header">
+            <div class="header-content">
+                <div class="header-branding">
+                    <h1 class="product-name">TrustBridge AI</h1>
+                    <h2 class="page-title">AI Communication Summarizer</h2>
+                    <p class="page-description">
+                        Turn complex leadership updates into clear, easy-to-understand communication for faculty and staff.
+                    </p>
+                </div>
+            </div>
+        </header>
+
+        <!-- Main Content Area -->
+        <main class="main-content">
+            <div class="content-grid">
+                <!-- Left Panel: Input Area -->
+                <section class="panel left-panel">
+                    <div class="panel-header">
+                        <h3>Original Leadership Message</h3>
+                    </div>
+
+                    <form id="summarizerForm" class="summarizer-form">
+                        <!-- Message Text Area -->
+                        <div class="form-group">
+                            <textarea
+                                id="originalMessage"
+                                class="form-textarea form-textarea-large"
+                                placeholder="Paste a meeting update, policy announcement, or leadership message here..."
+                                rows="12"
+                                required
+                            ></textarea>
+                        </div>
+
+                        <!-- Audience Dropdown -->
+                        <div class="form-group">
+                            <label for="audience" class="form-label">Audience</label>
+                            <select id="audience" class="form-select" required>
+                                <option value="">Select audience...</option>
+                                <option value="faculty">Faculty</option>
+                                <option value="staff">Staff</option>
+                                <option value="faculty-staff">Faculty and Staff</option>
+                                <option value="department">Department Team</option>
+                            </select>
+                        </div>
+
+                        <!-- Tone Dropdown -->
+                        <div class="form-group">
+                            <label for="tone" class="form-label">Tone</label>
+                            <select id="tone" class="form-select" required>
+                                <option value="">Select tone...</option>
+                                <option value="professional">Professional</option>
+                                <option value="warm">Warm</option>
+                                <option value="direct">Direct</option>
+                                <option value="reassuring">Reassuring</option>
+                            </select>
+                        </div>
+
+                        <!-- Simplify Button -->
+                        <button type="submit" class="btn btn-primary btn-simplify">
+                            <span class="btn-text">Simplify Message</span>
+                        </button>
+
+                        <!-- Processing Message -->
+                        <div id="processingMessage" class="processing-message" style="display: none;">
+                            <div class="processing-spinner"></div>
+                            <p>AI is simplifying your message...</p>
+                        </div>
+                    </form>
+                </section>
+
+                <!-- Right Panel: AI Summary Output -->
+                <section class="panel right-panel">
+                    <div class="panel-header">
+                        <h3>Clear Communication Preview</h3>
+                        <span class="ai-badge">AI-generated demo output</span>
+                    </div>
+
+                    <div id="summaryOutput" class="summary-output" style="display: none;">
+                        <!-- Short Summary -->
+                        <div class="summary-card">
+                            <h4 class="summary-title">Short Summary</h4>
+                            <p class="summary-text" id="shortSummary">
+                                This update explains recent department changes, upcoming expectations, and next steps for faculty and staff.
+                            </p>
+                        </div>
+
+                        <!-- Simplified Version -->
+                        <div class="simplified-section">
+                            <h4 class="section-title">Simplified Version</h4>
+                            <div class="simplified-content" id="simplifiedVersion">
+                                <p>Dear faculty and staff,</p>
+                                <p>We're making some important changes to how our department operates. These changes will help us work more efficiently and provide better support for our students.</p>
+                                <p>Starting next semester, we'll be implementing new procedures for course scheduling and student advising. This means you'll have more time to focus on teaching and research while our support staff handles administrative tasks.</p>
+                                <p>We'll provide training sessions in the coming weeks to help everyone understand the new system. Your department chair will be available for questions during office hours.</p>
+                                <p>Thank you for your continued dedication to our students and department.</p>
+                            </div>
+                        </div>
+
+                        <!-- Key Takeaways -->
+                        <div class="takeaways-section">
+                            <h4 class="section-title">Key Takeaways</h4>
+                            <ul class="takeaways-list" id="keyTakeaways">
+                                <li class="takeaway-item">New procedures for course scheduling and student advising will be implemented next semester</li>
+                                <li class="takeaway-item">These changes will give faculty more time for teaching and research</li>
+                                <li class="takeaway-item">Training sessions will be provided in the coming weeks</li>
+                                <li class="takeaway-item">Department chair will be available for questions during office hours</li>
+                            </ul>
+                        </div>
+
+                        <!-- Recommended Follow-Up -->
+                        <div class="followup-section">
+                            <h4 class="section-title">Recommended Follow-Up</h4>
+                            <div class="followup-content" id="recommendedFollowup">
+                                <p>Share this summary in the weekly department update and allow time for faculty questions during the next meeting. Consider sending a follow-up email with the full training schedule once it's finalized.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Empty State -->
+                    <div id="emptyState" class="empty-state">
+                        <div class="empty-state-content">
+                            <div class="empty-icon">📝</div>
+                            <h4>Ready to Simplify</h4>
+                            <p>Enter a leadership message on the left and click "Simplify Message" to see the AI-generated clear communication preview.</p>
+                        </div>
+                    </div>
+                </section>
+            </div>
+        </main>
+
+        <!-- Footer Navigation -->
+        <footer class="footer">
+            <div class="footer-buttons">
+                <button class="btn btn-secondary" onclick="goToDashboard()">
+                    Back to Dashboard
+                </button>
+                <button class="btn btn-secondary" onclick="goToPreviousFeature()">
+                    Previous Feature
+                </button>
+                <button class="btn btn-secondary" onclick="goToNextFeature()">
+                    Next Feature
+                </button>
+            </div>
+        </footer>
+    </div>
+
+    <script src="summarizer.js"></script>
+</body>
+</html>

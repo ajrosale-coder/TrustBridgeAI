@@ -8,7 +8,61 @@ A front-end MVP demo of TrustBridge AI, a web tool designed to help higher educa
 
 **Solution:** TrustBridge AI provides a transparent, safe environment where employees can submit anonymous feedback, which leadership can then receive as organized, actionable insights.
 
-## Feature 1: Anonymous Feedback Hub
+## Feature 2: AI Communication Summarizer
+
+This screen helps department chairs transform complex leadership messages into clear, easy-to-understand summaries for faculty and staff. The AI simplifies jargon, clarifies intent, and makes communication more accessible.
+
+### Key Features
+
+- **Message Input Area**
+  - Large text area for pasting leadership messages, meeting notes, or policy updates
+  - Audience selection (Faculty, Staff, Faculty and Staff, Department Team)
+  - Tone selection (Professional, Warm, Direct, Reassuring)
+  - "Simplify Message" button with processing animation
+
+- **AI-Generated Output**
+  - Short Summary: One-sentence overview of the message
+  - Simplified Version: Clear, easy-to-understand rewrite
+  - Key Takeaways: 3-4 bullet points highlighting what matters most
+  - Recommended Follow-Up: Suggested next steps for communication
+  - "AI-generated demo output" label
+
+- **Interactive Experience**
+  - Processing animation with spinner during "AI analysis"
+  - Smooth transitions when results appear
+  - Different mock outputs based on audience and tone selections
+  - Responsive design optimized for laptop demo
+
+### Demo Behavior
+
+The feature cycles through realistic mock summaries based on the selected audience and tone:
+
+- **Faculty + Professional**: Focuses on academic policies, research support, evaluations
+- **Staff + Warm**: Emphasizes team appreciation, work-life balance, development
+- **Faculty & Staff + Direct**: Clear, concise operational changes
+- **Department Team + Reassuring**: Builds confidence and addresses concerns
+
+Each combination produces contextually appropriate language and content.
+
+### Technical Implementation
+
+- **Mock AI Logic**: Pre-written summaries for all audience/tone combinations
+- **Form Validation**: Ensures message content and selections are provided
+- **Processing Simulation**: 2-second delay with animated spinner
+- **Dynamic Content**: Results update based on form selections
+- **Keyboard Shortcut**: `Ctrl/Cmd + Enter` to simplify when in text area
+
+## Project Structure
+
+```
+TrustBridgeAI/
+├── index.html              # Feature 1: Anonymous Feedback Hub
+├── script.js               # Feature 1 JavaScript
+├── feature2.html           # Feature 2: AI Communication Summarizer
+├── summarizer.js           # Feature 2 JavaScript
+├── styles.css              # Shared CSS for both features
+└── README.md              # This file
+```
 
 This is a polished, interactive front-end demo that showcases how department chairs can:
 

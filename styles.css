@@ -340,6 +340,11 @@ body {
     margin-top: var(--spacing-md);
 }
 
+.btn-simplify {
+    width: 100%;
+    margin-top: var(--spacing-lg);
+}
+
 /* Success Message */
 .success-message {
     display: flex;
@@ -675,8 +680,160 @@ body {
 }
 
 /* ============================================================================
-   Animation Utilities
+   Summarizer-Specific Styles
    ============================================================================ */
+
+.summarizer-form {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-lg);
+}
+
+.form-textarea-large {
+    min-height: 200px;
+    resize: vertical;
+    line-height: 1.6;
+}
+
+/* Processing Message */
+.processing-message {
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-md);
+    padding: var(--spacing-lg);
+    background-color: var(--color-accent-soft);
+    border: 1px solid var(--color-accent);
+    border-radius: var(--radius-md);
+    color: var(--color-text);
+    font-size: var(--font-size-sm);
+    animation: slideIn 300ms ease-out;
+    justify-content: center;
+}
+
+.processing-spinner {
+    width: 20px;
+    height: 20px;
+    border: 2px solid var(--color-accent);
+    border-top: 2px solid transparent;
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+/* Form Disabled State */
+.form-disabled {
+    opacity: 0.7;
+    pointer-events: none;
+}
+
+/* Summary Output */
+.summary-output {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-lg);
+    animation: fadeIn 300ms ease-out;
+}
+
+/* Simplified Section */
+.simplified-section {
+    background-color: var(--color-bg-secondary);
+    padding: var(--spacing-lg);
+    border-radius: var(--radius-md);
+}
+
+.simplified-content {
+    font-size: var(--font-size-sm);
+    color: var(--color-text-secondary);
+    line-height: 1.7;
+}
+
+.simplified-content p {
+    margin-bottom: var(--spacing-md);
+}
+
+.simplified-content p:last-child {
+    margin-bottom: 0;
+}
+
+/* Takeaways Section */
+.takeaways-section {
+    background-color: var(--color-bg-secondary);
+    padding: var(--spacing-lg);
+    border-radius: var(--radius-md);
+}
+
+.takeaways-list {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-sm);
+}
+
+.takeaway-item {
+    font-size: var(--font-size-sm);
+    color: var(--color-text-secondary);
+    padding-left: var(--spacing-md);
+    position: relative;
+    line-height: 1.5;
+}
+
+.takeaway-item:before {
+    content: "•";
+    color: var(--color-primary);
+    font-weight: bold;
+    position: absolute;
+    left: 0;
+}
+
+/* Follow-up Section */
+.followup-section {
+    background-color: var(--color-accent-soft);
+    border: 1px solid var(--color-accent);
+    padding: var(--spacing-lg);
+    border-radius: var(--radius-md);
+}
+
+.followup-content {
+    font-size: var(--font-size-sm);
+    color: var(--color-text-secondary);
+    line-height: 1.6;
+}
+
+/* Empty State */
+.empty-state {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 400px;
+    text-align: center;
+}
+
+.empty-state-content {
+    max-width: 300px;
+}
+
+.empty-icon {
+    font-size: var(--font-size-3xl);
+    margin-bottom: var(--spacing-md);
+    opacity: 0.6;
+}
+
+.empty-state h4 {
+    font-size: var(--font-size-lg);
+    font-weight: 600;
+    color: var(--color-text);
+    margin-bottom: var(--spacing-md);
+}
+
+.empty-state p {
+    font-size: var(--font-size-sm);
+    color: var(--color-text-secondary);
+    line-height: 1.6;
+}
 
 @keyframes fadeIn {
     from {

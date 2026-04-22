@@ -324,9 +324,7 @@ function goToDashboard() {
 
 function goToNextFeature() {
     console.log('Navigating to Next Feature...');
-    // In a real app, this would navigate to the next feature
-    // For demo purposes, show an alert
-    alert('Next feature coming soon!\n\nTrustBridge AI will soon include additional features such as:\n- Communication Templates\n- Action Item Tracking\n- Faculty Engagement Analytics\n- Leadership Response Planning');
+    window.location.href = 'feature2.html';
 }
 
 // ============================================================================
