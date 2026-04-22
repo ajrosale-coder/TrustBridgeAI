@@ -595,7 +595,7 @@ function setupFormValidation() {
 
 function goToDashboard() {
     console.log('Navigating to Dashboard...');
-    alert('Dashboard feature coming soon!\n\nIn a real app, this would return you to the main dashboard.');
+    window.location.href = 'dashboard.html';
 }
 
 function goToPreviousFeature() {

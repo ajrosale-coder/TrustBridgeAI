@@ -317,9 +317,7 @@ function createSummaryHTML(summary) {
 
 function goToDashboard() {
     console.log('Navigating to Dashboard...');
-    // In a real app, this would navigate to the dashboard
-    // For demo purposes, show an alert
-    alert('Dashboard feature coming soon!\n\nIn a real app, this would return you to the main dashboard.');
+    window.location.href = 'dashboard.html';
 }
 
 function goToNextFeature() {

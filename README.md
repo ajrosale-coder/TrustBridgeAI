@@ -56,13 +56,45 @@ Each combination produces contextually appropriate language and content.
 
 ```
 TrustBridgeAI/
-├── index.html              # Feature 1: Anonymous Feedback Hub
-├── script.js               # Feature 1 JavaScript
-├── feature2.html           # Feature 2: AI Communication Summarizer
-├── summarizer.js           # Feature 2 JavaScript
-├── styles.css              # Shared CSS for both features
-└── README.md              # This file
+├── dashboard.html           # Main dashboard with feature overview
+├── dashboard.js             # Dashboard interactivity
+├── index.html               # Feature 1: Anonymous Feedback Hub
+├── script.js                # Feature 1 JavaScript
+├── feature2.html            # Feature 2: AI Communication Summarizer
+├── summarizer.js            # Feature 2 JavaScript
+├── styles.css               # Shared CSS for all pages
+└── README.md               # This file
 ```
+
+## Navigation & User Flow
+
+The application provides seamless navigation between all features:
+
+### **Dashboard** (`dashboard.html`)
+- **Entry Point**: Main landing page showcasing all available features
+- **Feature Cards**: Interactive cards for each feature with descriptions and highlights
+- **Quick Stats**: Overview of system capabilities
+- **Navigation**: Click any feature card to open it
+
+### **Feature 1: Anonymous Feedback Hub** (`index.html`)
+- **Breadcrumb**: Dashboard › Anonymous Feedback Hub
+- **Footer Navigation**:
+  - 🏠 Dashboard (returns to main dashboard)
+  - Next Feature → (navigates to Feature 2)
+
+### **Feature 2: AI Communication Summarizer** (`feature2.html`)
+- **Breadcrumb**: Dashboard › AI Communication Summarizer
+- **Footer Navigation**:
+  - 🏠 Dashboard (returns to main dashboard)
+  - ← Previous Feature (returns to Feature 1)
+  - Next Feature → (shows coming soon message)
+
+### **Navigation Principles**
+- **Consistent Styling**: All pages share the same design system
+- **Clear Labels**: Buttons clearly indicate their destination
+- **No Dead Ends**: Users can always return to the dashboard
+- **Logical Flow**: Features are presented in a logical sequence
+- **Responsive**: Navigation works on all screen sizes
 
 This is a polished, interactive front-end demo that showcases how department chairs can:
 
