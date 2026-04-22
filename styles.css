@@ -595,25 +595,6 @@ body {
 }
 
 /* ============================================================================
-   Footer Navigation
-   ============================================================================ */
-
-.footer {
-    background-color: var(--color-white);
-    border-top: 1px solid var(--color-border);
-    padding: var(--spacing-lg) var(--spacing-xl);
-    margin-top: auto;
-}
-
-.footer-buttons {
-    max-width: 1400px;
-    margin: 0 auto;
-    display: flex;
-    gap: var(--spacing-md);
-    justify-content: flex-start;
-}
-
-/* ============================================================================
    Responsive Design
    ============================================================================ */
 
@@ -1079,6 +1060,16 @@ body {
 
 .footer-link:hover {
     color: var(--color-primary);
+}
+
+.footer-buttons {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 var(--spacing-xl);
+    display: flex;
+    gap: var(--spacing-md);
+    justify-content: center;
+    margin-top: var(--spacing-lg);
 }
 
 /* ============================================================================

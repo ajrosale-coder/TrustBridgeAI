@@ -212,8 +212,8 @@ function goToPreviousFeature() {
 }
 
 function goToNextFeature() {
-    console.log('Navigating to Dashboard...');
-    window.location.href = 'dashboard.html';
+    console.log('Navigating to First Feature (cycling demo)...');
+    window.location.href = 'index.html';
 }
 
 // ============================================================================

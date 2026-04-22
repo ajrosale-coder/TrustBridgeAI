@@ -320,6 +320,11 @@ function goToDashboard() {
     window.location.href = 'dashboard.html';
 }
 
+function goToPreviousFeature() {
+    console.log('Navigating to Dashboard (previous from first feature)...');
+    window.location.href = 'dashboard.html';
+}
+
 function goToNextFeature() {
     console.log('Navigating to Next Feature...');
     window.location.href = 'feature2.html';

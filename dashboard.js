@@ -55,4 +55,13 @@ function animateStats() {
     });
 }
 
+// ============================================================================
+// Navigation Functions
+// ============================================================================
+
+function goToFirstFeature() {
+    console.log('Starting demo - navigating to first feature...');
+    window.location.href = 'index.html';
+}
+
 console.log('TrustBridge AI - Dashboard Scripts initialized');
