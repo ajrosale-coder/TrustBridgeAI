@@ -605,7 +605,7 @@ function goToPreviousFeature() {
 
 function goToNextFeature() {
     console.log('Navigating to Next Feature...');
-    alert('Next feature coming soon!\n\nTrustBridge AI will soon include additional features such as:\n- Action Item Tracking\n- Communication Templates\n- Faculty Engagement Analytics\n- Leadership Response Planning');
+    window.location.href = 'feature3.html';
 }
 
 // ============================================================================
